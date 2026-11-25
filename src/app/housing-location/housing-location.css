@@ -1,0 +1,50 @@
+
+:host {
+  --accent-color: #d0c5e5;
+  --primary-color: #800080;
+
+  display: block;
+  width: 400px;
+  max-width: 100%;
+  margin: 10px;
+}
+
+.listing {
+  background: var(--accent-color);
+  border-radius: 30px;
+  padding-bottom: 30px;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.listing-photo {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.listing-heading {
+  color: var(--primary-color);
+  padding: 10px 20px 0 20px;
+}
+
+.listing-location {
+  padding: 10px 20px 20px 20px;
+}
+
+.listing-location::before {
+  content: url('http://localhost:3000/locations') / '';
+}
+
+section.listing a {
+  padding-left: 20px;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+section.listing a::after {
+  content: "\203A";
+  margin-left: 5px;
+}

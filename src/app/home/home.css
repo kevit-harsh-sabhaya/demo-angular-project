@@ -1,0 +1,58 @@
+
+:host {
+  --primary-color: #800080;
+}
+
+/* Search input */
+input[type="text"] {
+  border: solid 1px var(--primary-color);
+  padding: 10px;
+  border-radius: 8px;
+  margin-right: 4px;
+  display: inline-block;
+  width: 30%;
+  box-sizing: border-box;
+}
+
+/* Search button */
+button {
+  padding: 10px;
+  border: solid 1px var(--primary-color);
+  background: var(--primary-color);
+  color: white;
+  border-radius: 8px;
+}
+
+/* Housing cards container */
+.results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 400px);
+
+  column-gap: 14px;
+  row-gap: 14px;
+
+  margin-top: 50px;
+  margin-left: 60px;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .results {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  input[type="text"] {
+    width: 70%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 499px) {
+  .results {
+    grid-template-columns: 1fr;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
